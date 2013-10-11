@@ -1,0 +1,11 @@
+*.sublime-project
+*.sublime-workspace
+.settings.xml
+.settings
+.idea
+.DS_Store
+.directory
+node_modules/*
+config.json
+npm-debug.log
+test*.js

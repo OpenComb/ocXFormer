@@ -1,0 +1,149 @@
+<link href="/ocxformer/public/style/index.css" rel="stylesheet">
+<script src="/ocxformer/public/lib/jquery-formEditor.js"></script>
+<script src="/ocxformer/public/lib/index.js"></script>
+
+<div id="topbar">
+  <hr>
+</div>
+
+<div>
+
+  <div id="sidepanel-left">
+
+    <ul id="control-toolbox">
+
+      <li class="control-item" name="textinput">
+        Text Input
+      </li>
+
+      <li class="control-item" name="prependedtext">
+        Prepended Text
+      </li>
+
+      <li class="control-item" name="appendedtext">
+        Appended Text
+      </li>
+
+      <li class="control-item" name="prependedcheckbox">
+        Prepended Checkbox
+      </li>
+
+      <li class="control-item" name="appendedcheckbox">
+        Appended Checkbox
+      </li>
+
+      <li class="control-item" name="textarea">
+        Text Area
+      </li>
+
+    </ul>
+
+  </div>
+
+  <div id="sidepanel-right">
+    right
+  </div>
+
+  <div id="main-editarea">
+    <form class="form-horizontal">
+        <div id="legend" class="">
+          <legend class="">表单名</legend>
+        </div>
+    </form>
+    <hr class="insert-pos">
+  </div>
+
+
+  <div style="clear:all"></div>
+
+</div>
+
+
+<div id="control-templates" style="display:none">
+
+
+  <div class="control-group" name="textinput">
+
+    <!-- Text input-->
+    <label class="control-label" for="input01">Text input</label>
+    <div class="controls">
+      <input type="text" placeholder="placeholder" class="input-xlarge">
+      <p class="help-block">Supporting help text</p>
+    </div>
+  </div>
+
+  <div class="control-group" name="prependedtext">
+
+    <!-- Prepended text-->
+    <label class="control-label">Prepended text</label>
+    <div class="controls">
+      <div class="input-prepend">
+        <span class="add-on">^_^</span>
+        <input class="span2" placeholder="placeholder" id="prependedInput" type="text">
+      </div>
+      <p class="help-block">Supporting help text</p>
+    </div>
+
+  </div>
+
+  <div class="control-group" name="appendedtext">
+
+    <!-- Appended input-->
+    <label class="control-label">Appended text</label>
+    <div class="controls">
+      <div class="input-append">
+        <input class="span2" placeholder="placeholder" type="text">
+        <span class="add-on">^_^</span>
+      </div>
+      <p class="help-block">Supporting help text</p>
+    </div>
+
+  </div>
+
+  <div class="control-group" name="prependedcheckbox">
+
+    <!-- Prepended checkbox -->
+    <label class="control-label">Prepended checkbox</label>
+    <div class="controls">
+      <div class="input-prepend">
+        <span class="add-on">
+          <label class="checkbox">
+            <input type="checkbox" class="">
+          </label>
+        </span>
+        <input class="span2" placeholder="placeholder" type="text">
+      </div>
+      <p class="help-block">Supporting help text</p>
+    </div>
+
+  </div>
+
+  <div class="control-group" name="appendedcheckbox">
+
+    <!-- Appended checkbox -->
+    <label class="control-label">Append checkbox</label>
+    <div class="controls">
+      <div class="input-append">
+        <input class="span2" placeholder="placeholder" type="text">
+        <span class="add-on">
+          <label class="checkbox" for="appendedCheckbox">
+            <input type="checkbox" class="">
+          </label>
+        </span>
+      </div>
+      <p class="help-block">Supporting help text</p>
+    </div>
+  </div>
+
+  <div class="control-group" name="textarea">
+
+    <!-- Textarea -->
+    <label class="control-label">Textarea</label>
+    <div class="controls">
+      <div class="textarea">
+        <textarea type="" class=""> </textarea>
+      </div>
+    </div>
+  </div>
+
+</div>
