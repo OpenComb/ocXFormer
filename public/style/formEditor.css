@@ -1,19 +1,24 @@
 #sidepanel-left {
     float: left ;
     width: 200px ;
+    margin-left:-100%;
 }
 
 #sidepanel-right {
-    float: right ;
-    width: 260px ;
+    float: left ;
+    width: 240px ;
+    margin-left:-240px;
 }
 
 #main-editarea {
-    margin-left: 200px ;
-    margin-right: 260px ;
+    float: left ;
+    width: 100% ;
 }
 
 #main-editarea form {
+    margin-left: 210px ;
+    margin-right: 250px ;
+
     border: 1px solid #CCC;
     padding: 5px;
 }
@@ -30,5 +35,8 @@
     display: none ;
 }
 
+.control-props .control-group {
+    display: none ;
+}
 
 

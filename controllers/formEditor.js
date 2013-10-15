@@ -1,7 +1,7 @@
 module.exports = {
 
     layout: null
-    , view: "ocxformer/templates/index.html"
+    , view: "ocxformer/templates/formEditor.html"
     , process: function(seed,nut){
 
         
