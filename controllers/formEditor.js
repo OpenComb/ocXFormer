@@ -372,6 +372,8 @@ module.exports = {
                 return false;
             } ;
         }
+
+        $(document).trigger("ocxformer.ready")
     }
 } ;
 
