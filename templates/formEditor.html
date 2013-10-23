@@ -4,9 +4,21 @@
 
   <div id="main-editarea">
     <form class="form-horizontal ocxformeditor">
+      <div class="tipbar">
+	<p>
+	  <i class="icon-move"></i>
+	  可以拖动表单中的控件调整位置；
+	</p>
+	<p>
+	  <i class="icon-trash"></i>
+	  或者将控件拖动到表单外释放移除控件。
+	</p>
+      </div>
+
       <div class="theformname" name="theformname">
         <legend>表单名</legend>
       </div>
+
     </form>
   </div>
 
@@ -24,28 +36,28 @@
           <div class="accordion-inner">
 
             <ul>
-              <li class="control-item" name="realname" data-control-props="name,title,textvalue,placeholder,help,inputsize">
+              <li class="control-item" name="realname" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,inputsize,validation,validationmessage">
                 姓名
               </li>
-              <li class="control-item" name="email" data-control-props="name,title,textvalue,placeholder,help,inputsize">
+              <li class="control-item" name="email" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,inputsize,validation,validationmessage">
                 Email
               </li>
-              <li class="control-item" name="mobile" data-control-props="name,title,textvalue,placeholder,help,inputsize">
+              <li class="control-item" name="mobile" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,inputsize,validation,validationmessage">
                 移动电话
               </li>
-              <li class="control-item" name="telephone" data-control-props="name,title,textvalue,placeholder,help,inputsize">
+              <li class="control-item" name="telephone" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,inputsize,validation,validationmessage">
                 固定电话
               </li>
-              <li class="control-item" name="fax" data-control-props="name,title,textvalue,placeholder,help,inputsize">
+              <li class="control-item" name="fax" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,inputsize">
                 传真
               </li>
-              <li class="control-item" name="addr" data-control-props="name,title,textvalue,placeholder,help,inputsize">
+              <li class="control-item" name="addr" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,inputsize,validation,validationmessage">
                 地址
               </li>
-              <li class="control-item" name="zipcode" data-control-props="name,title,textvalue,placeholder,help,inputsize">
+              <li class="control-item" name="zipcode" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,inputsize,validation,validationmessage">
                 邮编
               </li>
-              <li class="control-item" name="gender" data-control-props="name,title,selectoptions,inputsize">
+              <li class="control-item" name="gender" data-control-props="titlestyle,controlstyle,name,title,selectoptions,inputsize,validation,validationmessage">
                 性别
               </li>
             </ul>
@@ -65,43 +77,43 @@
 
             <ul>
 
-              <li class="control-item" name="textinput" data-control-props="name,title,textvalue,placeholder,help,inputsize">
+              <li class="control-item" name="textinput" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,inputsize,validation,validationmessage">
                 Text Input
               </li>
 
-              <li class="control-item" name="prependedtext" data-control-props="name,title,textvalue,placeholder,help">
+              <li class="control-item" name="prependedtext" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,validation,validationmessage">
                 Prepended Text
               </li>
 
-              <li class="control-item" name="appendedtext" data-control-props="name,title,textvalue,placeholder,help">
+              <li class="control-item" name="appendedtext" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,validation,validationmessage">
                 Appended Text
               </li>
 
-              <li class="control-item" name="prependedcheckbox" data-control-props="name,title,textvalue,placeholder,help">
+              <li class="control-item" name="prependedcheckbox" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,validation,validationmessage">
                 Prepended Checkbox
               </li>
 
-              <li class="control-item" name="appendedcheckbox" data-control-props="name,title,textvalue,placeholder,help">
+              <li class="control-item" name="appendedcheckbox" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,validation,validationmessage">
                 Appended Checkbox
               </li>
 
-              <li class="control-item" name="textarea" data-control-props="name,title,textvalue,placeholder,help,inputsize">
+              <li class="control-item" name="textarea" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,help,inputsize,validation,validationmessage">
                 Text Area
               </li>
 
-              <li class="control-item" name="multipleradios" data-control-props="name,title,multipleradios">
+              <li class="control-item" name="multipleradios" data-control-props="titlestyle,controlstyle,name,title,multipleradios,validation,validationmessage">
                 Multiple Radios
               </li>
 
-              <li class="control-item" name="multiplecheckboxes" data-control-props="name,title,multiplecheckboxes">
+              <li class="control-item" name="multiplecheckboxes" data-control-props="titlestyle,controlstyle,name,title,multiplecheckboxes,validation,validationmessage">
                 Multiple Checkboxes
               </li>
 
-              <li class="control-item" name="selectbasic" data-control-props="name,title,selectoptions,inputsize">
+              <li class="control-item" name="selectbasic" data-control-props="titlestyle,controlstyle,name,title,selectoptions,inputsize,validation,validationmessage">
                 Select Basic
               </li>
 
-              <li class="control-item" name="selectmultiple" data-control-props="name,title,selectoptions,inputsize">
+              <li class="control-item" name="selectmultiple" data-control-props="titlestyle,controlstyle,name,title,selectoptions,inputsize,validation,validationmessage">
                 Select Multiple
               </li>
 
@@ -110,46 +122,132 @@
           </div>
         </div>
       </div>
-    </div>
 
+      <div class="accordion-group">
+	<div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" href="#advcontrols">
+            高级
+          </a>
+	</div>
+
+	<div id="advcontrols" class="accordion-body collapse" style="position: static;">
+	    <span style="margin-left:30px;line-height:40px;">coming soon ... ...</span>
+	</div>
+      </div>
+
+    </div>
   </div>
 
-  <div id="sidepanel-right">
-    <div class="control-props">
-      <h5>属性</h5>
+</div>
+
+<div id="sidepanel-right">
+
+  <ul class="nav nav-tabs" id="myTab">
+    <li class="active">
+      <a href="#control-props" data-toggle="tab">
+        <i class="icon-tags"></i>属性
+      </a>
+    </li>
+    <li>
+      <a href="#validation" data-toggle="tab">
+        <i class="icon-ok"></i>输入检查
+      </a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="validation" class="tab-pane">
+
+      <div style="height:20px">
+          <a class="btn btn-small test-validation-rules" style='float:right' href="javascript:void(0)"><i class="icon-wrench"></i></a>
+      </div>
+
+      <div class="control-group" data-prop-name="validation">
+
+	<label class="control-label">检查规则</label>
+
+        <ul class="validator-rules" style='clear:both; margin-top:10px'></ul>
+        <select name="vtype" class="input-large" style="margin-left:24px">
+          <option>+ 添加输入检查规则</option>
+          <optgroup>
+            <option value="min" defaultSetting='4'>最小长度/数量</option>
+            <option value="max" defaultSetting='20'>最大长度/数量</option>
+            <option value="notempty">不允许为空</option>
+            <option value="email">邮箱格式</option>
+            <option value="date">日期格式</option>
+            <option value="regexp" defaultSetting='/.+/'>正则表达式</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="control-group" data-prop-name="validationmessage">
+        <label class="control-label">错误消息</label>
+        <div class="controls">
+          <input name="validationmessage" type="text" placeholder="" class="input-large">
+        </div>
+      </div>
+
+    </div>
+
+    <div id="control-props" class="control-props tab-pane active">
 
       <div class="control-group" data-prop-name="name">
         <label class="control-label">名称(name)</label>
         <div class="controls">
-          <input name="name" type="text" placeholder="保存到数据库中的字段值" class="input">
+          <input name="name" type="text" placeholder="保存到数据库中的字段值" class="input-large">
         </div>
       </div>
 
       <div class="control-group" data-prop-name="title">
         <label class="control-label" for="textinput">标题</label>
         <div class="controls">
-          <input name="title" type="text" placeholder="" class="input">
+          <input name="title" type="text" placeholder="" class="input-large">
+        </div>
+      </div>
+
+      <div class="control-group" data-prop-name="titlestyle">
+        <label class="control-label">标题样式</label>
+        <div class="controls">
+          <select name="titlestyle" class="input-large">
+            <option value="">无</option>
+            <option value="text-warning">warning</option>
+            <option value="text-error">error</option>
+            <option value="text-info">info</option>
+            <option value="text-success">success</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group" data-prop-name="controlstyle">
+        <label class="control-label">控件样式</label>
+        <div class="controls">
+          <select name="controlstyle" class="input-large">
+            <option value="">无</option>
+            <option value="warning" class="">warning</option>
+            <option value="error">error</option>
+            <option value="info">info</option>
+            <option value="success">success</option>
+          </select>
         </div>
       </div>
 
       <div class="control-group" data-prop-name="textvalue">
         <label class="control-label" for="textvalue">文本值</label>
         <div class="controls">
-          <input name="textvalue" type="text" placeholder="" class="input">
+          <input name="textvalue" type="text" placeholder="" class="input-large">
         </div>
       </div>
 
       <div class="control-group" data-prop-name="placeholder">
         <label class="control-label" for="placeholder">提示</label>
         <div class="controls">
-          <input name="placeholder" type="text" placeholder="" class="input">
+          <input name="placeholder" type="text" placeholder="" class="input-large">
         </div>
       </div>
 
       <div class="control-group" data-prop-name="help">
         <label class="control-label" for="help">帮助</label>
         <div class="controls">
-          <input name="help" type="text" placeholder="" class="input">
+          <input name="help" type="text" placeholder="" class="input-large">
         </div>
       </div>
 
@@ -157,7 +255,8 @@
       <div class="control-group" data-prop-name="inputsize">
         <label class="control-label">尺寸</label>
         <div class="controls">
-          <select name="inputsize" class="input">
+          <select name="inputsize" class="input-large">
+	    <option value="">默认</option>
             <option value="input-mini">mini</option>
             <option value="input-small">small</option>
             <option value="input-medium">medium</option>
@@ -168,16 +267,17 @@
         </div>
       </div>
 
+
       <!-- Multiple Items -->
       <div class="control-group" data-prop-name="multipleitems">
         <label class="control-label">选项</label>
-        <textarea class="field" data-type="textarea-split" style="min-height: 200px" edit_id="eta_13"></textarea>
+        <textarea class="field-large" data-type="textarea-split" style="width:210px; min-height: 200px" edit_id="eta_13"></textarea>
       </div>
 
       <!-- The form name -->
       <div class="control-group" data-prop-name="theformname">
         <label class="control-label">表单名称</label>
-        <input name="theformname" type="text" placeholder="" class="input">
+        <input name="theformname" type="text" placeholder="" class="input-large">
       </div>
 
     </div>
@@ -324,55 +424,55 @@
       </select>
     </div>
   </div>
-  
+
   <!-- ---------------- -->
 
   <div class="control-group" name="realname">
     <label class="control-label">姓名</label>
     <div class="controls">
-      <input type="text" placeholder="请输入真实用户姓名" class="input-xlarge" name="realname">
+      <input type="text" placeholder="请输入真实用户姓名" class="input-xlarge" name="realname" v:min="4" v:max="20">
       <p class="help-block">真实用户姓名</p>
     </div>
   </div>
   <div class="control-group" name="email">
     <label class="control-label">电子邮件</label>
     <div class="controls">
-      <input type="text" placeholder="请输入电子邮件" class="input-xlarge" name="email">
+      <input type="text" placeholder="请输入电子邮件" class="input-xlarge" name="email" v:min="4" v:max="20" v:email>
       <p class="help-block">电子邮件(email)</p>
     </div>
   </div>
   <div class="control-group" name="mobile">
     <label class="control-label">移动电话</label>
     <div class="controls">
-      <input type="text" placeholder="请输入移动电话号码" class="input-xlarge" name="mobile">
+      <input type="text" placeholder="请输入移动电话号码" class="input-xlarge" name="mobile" v:mobilenumber>
       <p class="help-block">移动电话的号码</p>
     </div>
   </div>
   <div class="control-group" name="telephone">
     <label class="control-label">固定电话</label>
     <div class="controls">
-      <input type="text" placeholder="请输入固定电话号码" class="input-xlarge" name="telephone">
+      <input type="text" placeholder="请输入固定电话号码" class="input-xlarge" name="telephone" v:telnumber>
       <p class="help-block">家庭或办公室的电话号码</p>
     </div>
   </div>
   <div class="control-group" name="fax">
     <label class="control-label">传真</label>
     <div class="controls">
-      <input type="text" placeholder="请输入传真号码" class="input-xlarge" name="fax">
+      <input type="text" placeholder="请输入传真号码" class="input-xlarge" name="fax" v:telnumber>
       <p class="help-block">家庭或办公室的传真号码</p>
     </div>
   </div>
   <div class="control-group" name="addr">
     <label class="control-label">地址</label>
     <div class="controls">
-      <input type="text" placeholder="请输入通讯地址" class="input-xlarge" name="addr">
+      <input type="text" placeholder="请输入通讯地址" class="input-xlarge" name="addr" v:min="4" v:max="20">
       <p class="help-block">通讯地址</p>
     </div>
   </div>
   <div class="control-group" name="zipcode">
     <label class="control-label">邮编</label>
     <div class="controls">
-      <input type="text" placeholder="请输入邮政编码" class="input-small" name="zipcode">
+      <input type="text" placeholder="请输入邮政编码" class="input-small" name="zipcode" v:zipcode>
       <p class="help-block">邮政编码</p>
     </div>
   </div>
@@ -386,7 +486,7 @@
       </select>
     </div>
   </div>
-  
+
 </div>
 
 
