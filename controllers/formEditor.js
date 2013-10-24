@@ -132,7 +132,7 @@ module.exports = {
         function openProps(control){
 
             // 清理状态
-            $(".control-props .control-group").hide() ;
+            $("[data-prop-name]").hide() ;
             $(".control-active").removeClass('control-active') ;
 
             // 设置状态
