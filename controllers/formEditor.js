@@ -54,17 +54,44 @@ module.exports = {
 	    }
         }) ;
 
+        $(".control-item")
+            .draggable({
+                stop: function(event,ui){
+                    $dropPos.insertAfter($form).hide() ;
+                }
+                , helper: function(){
+                    return createControlFromLabel(this) ;
+                }
+                , connectToSortable: "#main-editarea>form"
+            }) ;
+
+
         function createControlFromLabel(eleLabel){
             var controlname = $(eleLabel).attr("name") ;
             return initControl( $("#control-templates .control-group[name="+controlname+"]")
                                 .clone() ) ;
         }
         function initControl(control){
+	    // 随机id
+	    var id = 'control_'+Math.ceil( (Math.random()*999999) ).toString(16) ;
+	    $(control)
+		.attr('id',id)
+		.find("select,textarea,input[type=text]")
+		.attr({
+		    'v:label':'#'+id+' p.help-block'
+		    , 'v:failedclass': 'text-error'
+		}) ;
+
             return $(control).click(function(){
                 openProps(this) ;
             }) ;
         }
-        function displyEmptyForm (){
+
+        // 表单名称也作为一个可编辑的控件
+        initControl( $(".theformname")[0] ) ;
+
+
+	function displyEmptyForm (){
             if( !$form.find('.control-group').size() ){
                 if( !$form.find('div.alert').size() ){
 		    $('<div class="alert alert-info">'
@@ -101,20 +128,6 @@ module.exports = {
         // first call
         displyEmptyForm() ;
 
-
-        $(".control-item")
-            .draggable({
-                stop: function(event,ui){
-                    $dropPos.insertAfter($form).hide() ;
-                }
-                , helper: function(){
-                    return createControlFromLabel(this) ;
-                }
-                , connectToSortable: "#main-editarea>form"
-            }) ;
-
-        // 表单名称也作为一个可编辑的控件
-        initControl( $(".theformname")[0] ) ;
 
         function openProps(control){
 
@@ -476,7 +489,17 @@ module.exports = {
             jQuery.fn.ocxformerExport = function(){
 
 		var $tmpform = $(this).clone() ;
-		$tmpform.find('.tipbar,.alert').remove() ;
+
+		// 清理内容
+		$tmpform.find('.tipbar,.alert,.ocvalidation-message').remove() ;
+
+		// 清理样式
+		for(var classname in {
+		    // 测试 输入检查时 留下的状态
+		    "ocvalidation-success": 1
+		    , "ocvalidation-failed": 1
+		})
+		    $tmpform.find('.'+classname).removeClass(classname) ;
 
                 var json = {
                     title: $(this).find('.theformname legend').text()
@@ -546,7 +569,6 @@ module.exports = {
             } ;
         }
 
-
         // ------------------------------------------------
         //   数据校验
         var propValidation = $('[data-prop-name=validation]')[0] ;
@@ -565,7 +587,10 @@ module.exports = {
         function validationRuls (input) {
             var rules = [] ;
             for(var i=0;i<input.attributes.length;i++){
-                if( input.attributes[i].name.match(/^v:.+/) )
+                if( input.attributes[i].name.match(/^v:.+/) 
+		    && input.attributes[i].name!='v:label'
+		    && input.attributes[i].name!='v:failedclass'
+		  )
                     rules.push(input.attributes[i].name) ;
             }
             return rules ;
