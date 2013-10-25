@@ -296,7 +296,7 @@ module.exports = {
                             var selector = 'select[name=vtype] option[value='+value[i].name+']' ;
                             var option = $(selector) [0] ;
                             if(option)
-                                createRuleInputByOption(option) ;
+                                createRuleInputByOption(option,value[i].value) ;
                         }
                     }
                 }
@@ -595,7 +595,7 @@ module.exports = {
             }
             return rules ;
         }
-        function createRuleInputByOption(option){
+        function createRuleInputByOption(option,value){
 
             var $li = $("<li></span>"
                         + $(option).text()
@@ -624,7 +624,7 @@ module.exports = {
                 $li.find('.icon-pencil').click(function(){
                 }) ;
 
-                $("<div style='clear:both;text-align:right;'><input type=text class='input-large' name='setting' value=\""+defaultSetting+"\" style='margin-bottom:0px'></div>")
+                $("<div style='clear:both;text-align:right;'><input type=text class='input-large' name='setting' value=\""+(value===undefined? defaultSetting: value)+"\" style='margin-bottom:0px'></div>")
                     .appendTo($li)
                     .find('input')
                     .keyup(function(){
