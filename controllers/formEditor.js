@@ -7,8 +7,56 @@ module.exports = {
         var $form = $("#main-editarea>form") ;
         var $dropPos = $('#main-editarea>.insert-pos') ;
 
+
+	// 拖拽提示
 	var tipbarHeight = $form.find('.tipbar').height() ;
 	var tipbarMargin = ($form.find('.tipbar').outerHeight() - tipbarHeight)/2 ;
+	function showDragTip() {
+	    $form.find('.tipbar')
+		.animate(
+		    {
+			opacity: 'show'
+			, height: tipbarHeight
+			, 'padding-top': tipbarMargin
+			, 'padding-bottom': tipbarMargin
+		    }
+		    , 300
+		) ;
+	}
+	var hideDragTipTimer ;
+	function hideDragTip() {
+	    hideDragTipTimer!==undefined && clearTimeout(hideDragTipTimer) ;
+	    hideDragTipTimer = setTimeout( hideDragTipAtOnce, 1500 ) ;
+	}
+	function hideDragTipAtOnce() {
+	    $form.find('.tipbar')
+		.animate(
+		    {
+			opacity: 'hide'
+			, height: 0
+			, 'padding-top': '0px'
+			, 'padding-bottom': '0px'
+		    }
+		    , 300
+		    , function(){
+			hideDragTipTimer = undefined ;
+		    }
+		) ;
+	}
+	$('.tipbar').mouseover(function(){
+	    if( hideDragTipTimer===undefined )
+		return ;
+	    clearTimeout(hideDragTipTimer) ;
+	    $(this).stop() ;
+	}) ;
+	$('.tipbar').mouseout(function(){
+	    if( hideDragTipTimer===undefined )
+		return ;
+	    clearTimeout(hideDragTipTimer) ;
+	    hideDragTipAtOnce() ;
+	}) ;
+
+
 
         $form.sortable({
             items: ".control-group"
@@ -27,37 +75,21 @@ module.exports = {
 		// 是否显示提示
 		displyEmptyForm() ;
 
-		// 
-		$form.find('.tipbar')
-		    .animate(
-			{
-			    opacity: 'hide'
-			    , height: 0
-			    , 'padding-top': '0px'
-			    , 'padding-bottom': '0px'
-			}
-			, 300
-		    ) ;
+		hideDragTip() ;
             }
 	    , over: function(){
-		$form.find('.tipbar')
-		    .animate(
-			{
-			    opacity: 'show'
-			    , height: tipbarHeight
-			    , 'padding-top': tipbarMargin
-			    , 'padding-bottom': tipbarMargin
-			}
-			, 300
-		    ) ;
-
+		showDragTip() ;
 	    }
         }) ;
+
+	
 
         $(".control-item")
             .draggable({
                 stop: function(event,ui){
                     $dropPos.insertAfter($form).hide() ;
+
+		    hideDragTip() ;
                 }
                 , helper: function(){
                     return createControlFromLabel(this) ;
