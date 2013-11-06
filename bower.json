@@ -1,0 +1,7 @@
+{
+    "name": "ocxformer"
+    , "dependencies": {
+	"jquery-ui": "*"
+	, "bootstrap": "*"
+    }
+}
