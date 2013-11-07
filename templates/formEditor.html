@@ -175,7 +175,7 @@
           <a class="btn btn-small test-validation-rules" style='float:right' href="javascript:void(0)"><i class="icon-wrench"></i></a>
       </div>
 
-      <div class="control-group" data-prop-name="validation">
+      <div class="form-group" data-prop-name="validation">
 
 	<label class="control-label">检查规则</label>
 
@@ -197,7 +197,7 @@
         </select>
       </div>
 
-      <div class="control-group" data-prop-name="validationmessage">
+      <div class="form-group" data-prop-name="validationmessage">
         <label class="control-label">错误消息</label>
         <div class="controls">
           <input name="validationmessage" type="text" placeholder="" class="input-large">
@@ -208,21 +208,21 @@
 
     <div id="control-props" class="control-props tab-pane active">
 
-      <div class="control-group" data-prop-name="name">
+      <div class="form-group" data-prop-name="name">
         <label class="control-label">名称(name)</label>
         <div class="controls">
           <input name="name" type="text" placeholder="保存到数据库中的字段值" class="input-large">
         </div>
       </div>
 
-      <div class="control-group" data-prop-name="title">
+      <div class="form-group" data-prop-name="title">
         <label class="control-label" for="textinput">标题</label>
         <div class="controls">
           <input name="title" type="text" placeholder="" class="input-large">
         </div>
       </div>
 
-      <div class="control-group" data-prop-name="titlestyle">
+      <div class="form-group" data-prop-name="titlestyle">
         <label class="control-label">标题样式</label>
         <div class="controls">
           <select name="titlestyle" class="input-large">
@@ -235,7 +235,7 @@
         </div>
       </div>
 
-      <div class="control-group" data-prop-name="controlstyle">
+      <div class="form-group" data-prop-name="controlstyle">
         <label class="control-label">控件样式</label>
         <div class="controls">
           <select name="controlstyle" class="input-large">
@@ -248,14 +248,14 @@
         </div>
       </div>
 
-      <div class="control-group" data-prop-name="textvalue">
+      <div class="form-group" data-prop-name="textvalue">
         <label class="control-label" for="textvalue">文本值</label>
         <div class="controls">
           <input name="textvalue" type="text" placeholder="" class="input-large">
         </div>
       </div>
 
-      <div class="control-group" data-prop-name="placeholder">
+      <div class="form-group" data-prop-name="placeholder">
         <label class="control-label" for="placeholder">提示</label>
         <div class="controls">
           <input name="placeholder" type="text" placeholder="" class="input-large">
@@ -263,7 +263,7 @@
       </div>
 
       <!-- Select Basic -->
-      <div class="control-group" data-prop-name="inputsize">
+      <div class="form-group" data-prop-name="inputsize">
         <label class="control-label">尺寸</label>
         <div class="controls">
           <select name="inputsize" class="input-large">
@@ -280,13 +280,13 @@
 
 
       <!-- Multiple Items -->
-      <div class="control-group" data-prop-name="multipleitems">
+      <div class="form-group" data-prop-name="multipleitems">
         <label class="control-label">选项</label>
         <textarea class="field-large" data-type="textarea-split" style="width:210px; min-height: 200px" edit_id="eta_13"></textarea>
       </div>
 
       <!-- The form name -->
-      <div class="control-group" data-prop-name="theformname">
+      <div class="form-group" data-prop-name="theformname">
         <label class="control-label">表单名称</label>
         <input name="theformname" type="text" placeholder="" class="input-large">
       </div>
@@ -302,20 +302,20 @@
 <div id="control-templates" style="display:none">
 
   <!-- Text input-->
-  <div class="control-group" name="textinput">
-    <label class="control-label" for="input01">Text input</label>
-    <div class="controls">
+  <div class="form-group" name="textinput">
+    <label class="col-sm-4 control-label" for="input01">Text input</label>
+    <div class="col-sm-8 controls">
       <input type="text" placeholder="placeholder" class="input-xlarge">
       <p class="help-block">Supporting help text</p>
     </div>
   </div>
 
-  <div class="control-group" name="prependedtext">
+  <div class="form-group" name="prependedtext">
 
     <!-- Prepended text-->
-    <label class="control-label">Prepended text</label>
-    <div class="controls">
-      <div class="input-prepend">
+    <label class="col-sm-4 control-label">Prepended text</label>
+    <div class="col-sm-8 controls">
+      <div class="input-prepend form-control">
         <span class="add-on">^_^</span>
         <input class="span2" placeholder="placeholder" id="prependedInput" type="text">
       </div>
@@ -324,12 +324,12 @@
 
   </div>
 
-  <div class="control-group" name="appendedtext">
+  <div class="form-group" name="appendedtext">
 
     <!-- Appended input-->
-    <label class="control-label">Appended text</label>
-    <div class="controls">
-      <div class="input-append">
+    <label class="col-sm-4 control-label">Appended text</label>
+    <div class="col-sm-8 controls">
+      <div class="input-append form-control">
         <input class="span2" placeholder="placeholder" type="text">
         <span class="add-on">^_^</span>
       </div>
@@ -338,12 +338,12 @@
 
   </div>
 
-  <div class="control-group" name="prependedcheckbox">
+  <div class="form-group" name="prependedcheckbox">
 
     <!-- Prepended checkbox -->
-    <label class="control-label">Prepended checkbox</label>
-    <div class="controls">
-      <div class="input-prepend">
+    <label class="col-sm-4 control-label">Prepended checkbox</label>
+    <div class="col-sm-8 controls">
+      <div class="input-prepend form-control">
         <span class="add-on">
           <label class="checkbox">
             <input type="checkbox" class="">
@@ -356,12 +356,12 @@
 
   </div>
 
-  <div class="control-group" name="appendedcheckbox">
+  <div class="form-group" name="appendedcheckbox">
 
     <!-- Appended checkbox -->
-    <label class="control-label">Append checkbox</label>
-    <div class="controls">
-      <div class="input-append">
+    <label class="col-sm-4 control-label">Append checkbox</label>
+    <div class="col-sm-8 controls">
+      <div class="input-append form-control">
         <input class="span2" placeholder="placeholder" type="text">
         <span class="add-on">
           <label class="checkbox" for="appendedCheckbox">
@@ -373,21 +373,21 @@
     </div>
   </div>
 
-  <div class="control-group" name="textarea">
+  <div class="form-group" name="textarea">
 
     <!-- Textarea -->
-    <label class="control-label">Textarea</label>
-    <div class="controls">
+    <label class="col-sm-4 control-label">Textarea</label>
+    <div class="col-sm-8 controls">
       <div class="textarea">
-        <textarea type="" class=""> </textarea>
+        <textarea type="" class="form-control"> </textarea>
       </div>
     </div>
   </div>
 
   <!-- Multiple Radios -->
-  <div class="control-group" name="multipleradios">
-    <label class="control-label">Multiple Radios</label>
-    <div class="controls">
+  <div class="form-group" name="multipleradios">
+    <label class="col-sm-4 control-label">Multiple Radios</label>
+    <div class="col-sm-8 controls">
       <label class="radio">
         <input type="radio" name="radios" value="Option one">
         Option one
@@ -400,9 +400,9 @@
   </div>
 
   <!-- Multiple Checkboxes -->
-  <div class="control-group" name="multiplecheckboxes">
-    <label class="control-label">Multiple Checkboxes</label>
-    <div class="controls">
+  <div class="form-group" name="multiplecheckboxes">
+    <label class="col-sm-4 control-label">Multiple Checkboxes</label>
+    <div class="col-sm-8 controls">
       <label class="checkbox">
         <input type="checkbox" name="checkbox" value="Option one">
         Option one
@@ -415,10 +415,10 @@
   </div>
 
   <!-- Select Basic -->
-  <div class="control-group" name="selectbasic">
-    <label class="control-label">Select Basic</label>
-    <div class="controls">
-      <select class="input-xlarge">
+  <div class="form-group" name="selectbasic">
+    <label class="col-sm-4 control-label">Select Basic</label>
+    <div class="col-sm-8 controls">
+      <select class="form-control">
         <option>Option one</option>
         <option>Option two</option>
       </select>
@@ -426,10 +426,10 @@
   </div>
 
   <!-- Select Multiple -->
-  <div class="control-group" name="selectmultiple">
-    <label class="control-label">Select Multiple</label>
-    <div class="controls">
-      <select name="selectmultiple" class="input-xlarge" multiple="multiple">
+  <div class="form-group" name="selectmultiple">
+    <label class="col-sm-4 control-label">Select Multiple</label>
+    <div class="col-sm-8 controls">
+      <select name="selectmultiple" class="form-control" multiple="multiple">
         <option>Option one</option>
         <option>Option two</option>
       </select>
@@ -437,83 +437,83 @@
   </div>
 
   <!-- Linkage Select -->
-  <div class="control-group" name="linkageselect">
-    <label class="control-label">Select Title</label>
-    <div class="controls">
-      <select name="linkageselect" class="input"></select>
+  <div class="form-group" name="linkageselect">
+    <label class="col-sm-4 control-label">Select Title</label>
+    <div class="col-sm-8 controls">
+      <select name="linkageselect" class="form-control"></select>
     </div>
   </div>
 
   <!-- ---------------- -->
 
-  <div class="control-group" name="realname">
-    <label class="control-label">姓名</label>
-    <div class="controls">
-      <input type="text" placeholder="请输入真实用户姓名" class="input-xlarge" name="realname" v:min="2" v:max="20">
+  <div class="form-group" name="realname">
+    <label class="col-sm-4 control-label">姓名</label>
+    <div class="col-sm-8 controls">
+      <input type="text" placeholder="请输入真实用户姓名" class="form-control" name="realname" v:min="2" v:max="20">
       <p class="help-block"></p>
     </div>
   </div>
-  <div class="control-group" name="email">
-    <label class="control-label">电子邮件</label>
-    <div class="controls">
-      <input type="text" placeholder="请输入电子邮件" class="input-xlarge" name="email" v:min="6" v:max="60" v:email>
+  <div class="form-group" name="email">
+    <label class="col-sm-4 control-label">电子邮件</label>
+    <div class="col-sm-8 controls">
+      <input type="text" placeholder="请输入电子邮件" class="form-control" name="email" v:min="6" v:max="60" v:email>
       <p class="help-block"></p>
     </div>
   </div>
-  <div class="control-group" name="mobile">
-    <label class="control-label">移动电话</label>
-    <div class="controls">
-      <input type="text" placeholder="请输入移动电话号码" class="input-xlarge" name="mobile" v:mobilenumber>
+  <div class="form-group" name="mobile">
+    <label class="col-sm-4 control-label">移动电话</label>
+    <div class="col-sm-8 controls">
+      <input type="text" placeholder="请输入移动电话号码" class="form-control" name="mobile" v:mobilenumber>
       <p class="help-block"></p>
     </div>
   </div>
-  <div class="control-group" name="telephone">
-    <label class="control-label">固定电话</label>
-    <div class="controls">
+  <div class="form-group" name="telephone">
+    <label class="col-sm-4 control-label">固定电话</label>
+    <div class="col-sm-8 controls">
       <input type="text" placeholder="请输入固定电话号码" class="input-xlarge" name="telephone" v:telnumber>
       <p class="help-block"></p>
     </div>
   </div>
-  <div class="control-group" name="fax">
-    <label class="control-label">传真</label>
-    <div class="controls">
-      <input type="text" placeholder="请输入传真号码" class="input-xlarge" name="fax" v:telnumber>
+  <div class="form-group" name="fax">
+    <label class="col-sm-4 control-label">传真</label>
+    <div class="col-sm-8 controls">
+      <input type="text" placeholder="请输入传真号码" class="form-control" name="fax" v:telnumber>
       <p class="help-block"></p>
     </div>
   </div>
-  <div class="control-group" name="addr">
-    <label class="control-label">地址</label>
-    <div class="controls">
-      <input type="text" placeholder="请输入通讯地址" class="input-xlarge" name="addr" v:min="4" v:max="40">
+  <div class="form-group" name="addr">
+    <label class="col-sm-4 control-label">地址</label>
+    <div class="col-sm-8 controls">
+      <input type="text" placeholder="请输入通讯地址" class="form-control" name="addr" v:min="4" v:max="40">
       <p class="help-block"></p>
     </div>
   </div>
-  <div class="control-group" name="zipcode">
-    <label class="control-label">邮编</label>
-    <div class="controls">
-      <input type="text" placeholder="请输入邮政编码" class="input-small" name="zipcode" v:zipcode>
+  <div class="form-group" name="zipcode">
+    <label class="col-sm-4 control-label">邮编</label>
+    <div class="col-sm-8 controls">
+      <input type="text" placeholder="请输入邮政编码" class="form-control" name="zipcode" v:zipcode>
       <p class="help-block"></p>
     </div>
   </div>
-  <div class="control-group" name="gender">
-    <label class="control-label">性别</label>
-    <div class="controls">
-      <select class="input-small" name="gender">
+  <div class="form-group" name="gender">
+    <label class="col-sm-4 control-label">性别</label>
+    <div class="col-sm-8 controls">
+      <select class="form-control" name="gender">
         <option selected>保密</option>
         <option>女</option>
         <option>男</option>
       </select>
     </div>
   </div>
-  <div class="control-group" name="districts">
-    <label class="control-label">地区</label>
-    <div class="controls">
+  <div class="form-group" name="districts">
+    <label class="col-sm-4 control-label">地区</label>
+    <div class="col-sm-8 controls">
 
-      <select class="input-small" name="provinces" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent"></select>
+      <select class="form-control" name="provinces" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent"></select>
 
-      <select class="input-small" name="cities" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent" linkto=""></select>
+      <select class="form-control" name="cities" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent" linkto=""></select>
 
-      <select class="input-small" name="districts" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent" linkto=""></select>
+      <select class="form-control" name="districts" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent" linkto=""></select>
 
     </div>
   </div>

@@ -59,12 +59,13 @@ module.exports = {
 
 
         $form.sortable({
-            items: ".control-group"
+            items: ".form-group"
             , forcePlaceholderSizeType: true
             , stop: function(event,ui){
 		// 将控件放入表单中
-                if( !ui.item.hasClass('control-group') && ui.item.size() ){
-                    createControlFromLabel(ui.item[0],true).insertBefore(ui.item) ;
+                if( !ui.item.hasClass('form-group') && ui.item.size() ){
+                    createControlFromLabel(ui.item[0],true)
+			.show().insertBefore(ui.item) ;
                     ui.item[0].parentNode.removeChild(ui.item[0]) ;
                 }
 		// 从表单中移除控件
@@ -100,10 +101,10 @@ module.exports = {
 
         function createControlFromLabel(eleLabel,init){
             var controlname = $(eleLabel).attr("name") ;
-	    var control = $("#control-templates .control-group[name="+controlname+"]")
+	    var control = $("#control-templates .form-group[name="+controlname+"]")
                 .clone()
 		.hide() ;
-	    jQuery(document.body).insert() ;
+	    jQuery(document.body).append(control) ;
 	    
 	    if(init)
 		initControl(control) ;
@@ -156,7 +157,7 @@ module.exports = {
 
 
 	function displyEmptyForm (){
-            if( !$form.find('.control-group').size() ){
+            if( !$form.find('.form-group').size() ){
                 if( !$form.find('div.alert').size() ){
 		    $('<div class="alert alert-info">'
 		      + '<i class="icon-plus"></i> '
@@ -570,7 +571,7 @@ module.exports = {
                     , controls: []
                     , html: $tmpform.html()
                 } ;
-                $(this).find('.control-group').each(function(){
+                $(this).find('.form-group').each(function(){
                     var type = $(this).attr('name') ;
                     var jsoncontrol = {
                         type: type
@@ -595,12 +596,12 @@ module.exports = {
         if(!jQuery.fn.ocxformerRestore) {
             jQuery.fn.ocxformerRestore = function(json){
 		// 清除表单
-		$(this).find('.control-group,.theformname').remove() ;
+		$(this).find('.form-group,.theformname').remove() ;
 
 		// 恢复表单
                 $(this).append(json.html) ;
 
-                $(this).find('.control-group').each(function(){
+                $(this).find('.form-group').each(function(){
                     initControl(this) ;
                 }) ;
 
@@ -701,7 +702,7 @@ module.exports = {
         }
 
         $('.test-validation-rules').click(function(){
-            $('.ocxformeditor .control-group')
+            $('.ocxformeditor .form-group')
                 .find('input,select,textarea')
 		.validate(false) ;
         }) ;
