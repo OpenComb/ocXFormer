@@ -1,5 +1,6 @@
 <link href="/ocxformer/public/style/formEditor.css" rel="stylesheet">
 <require src="/jquery-ui/ui/jquery-ui.js" />
+<link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 <require src="/ocxformer/public/js/linkageSelect.js" />
 
 <div>
@@ -509,11 +510,11 @@
     <label class="col-sm-4 control-label">地区</label>
     <div class="col-sm-8 controls">
 
-      <select class="form-control" name="provinces" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent"></select>
+      <select class="col-sm-4" name="provinces" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent"></select>
 
-      <select class="form-control" name="cities" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent" linkto=""></select>
+      <select class="col-sm-4" name="cities" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent" linkto=""></select>
 
-      <select class="form-control" name="districts" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent" linkto=""></select>
+      <select class="col-sm-4" name="districts" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent" linkto=""></select>
 
     </div>
   </div>
