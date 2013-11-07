@@ -1,4 +1,6 @@
 <link href="/ocxformer/public/style/formEditor.css" rel="stylesheet">
+<require src="/jquery-ui/ui/jquery-ui.js" />
+<require src="/ocxformer/public/js/linkageSelect.js" />
 
 <div>
 
@@ -60,6 +62,10 @@
               <li class="control-item" name="gender" data-control-props="titlestyle,controlstyle,name,title,selectoptions,inputsize,validation,validationmessage">
                 性别
               </li>
+              <li class="control-item" name="districts" data-control-props="titlestyle,controlstyle,name,title,selectoptions,inputsize,validation,validationmessage">
+		省份/城市/区县
+              </li>
+
             </ul>
 
           </div>
@@ -131,7 +137,15 @@
 	</div>
 
 	<div id="advcontrols" class="accordion-body collapse" style="position: static;">
-	    <span style="margin-left:30px;line-height:40px;">coming soon ... ...</span>
+	  
+          <ul>
+            <li class="control-item" name="linkageselect" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+              联动菜单
+            </li>
+	  </ul>
+
+	  </ul>
+
 	</div>
       </div>
 
@@ -422,6 +436,14 @@
     </div>
   </div>
 
+  <!-- Linkage Select -->
+  <div class="control-group" name="linkageselect">
+    <label class="control-label">Select Title</label>
+    <div class="controls">
+      <select name="linkageselect" class="input"></select>
+    </div>
+  </div>
+
   <!-- ---------------- -->
 
   <div class="control-group" name="realname">
@@ -481,6 +503,18 @@
         <option>女</option>
         <option>男</option>
       </select>
+    </div>
+  </div>
+  <div class="control-group" name="districts">
+    <label class="control-label">地区</label>
+    <div class="controls">
+
+      <select class="input-small" name="provinces" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent"></select>
+
+      <select class="input-small" name="cities" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent" linkto=""></select>
+
+      <select class="input-small" name="districts" collection="ocxformer/districts" coltitle="name" colvalue="value" colparent="parent" linkto=""></select>
+
     </div>
   </div>
 

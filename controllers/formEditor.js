@@ -64,7 +64,7 @@ module.exports = {
             , stop: function(event,ui){
 		// 将控件放入表单中
                 if( !ui.item.hasClass('control-group') && ui.item.size() ){
-                    createControlFromLabel(ui.item[0]).insertBefore(ui.item) ;
+                    createControlFromLabel(ui.item[0],true).insertBefore(ui.item) ;
                     ui.item[0].parentNode.removeChild(ui.item[0]) ;
                 }
 		// 从表单中移除控件
@@ -92,16 +92,22 @@ module.exports = {
 		    hideDragTip() ;
                 }
                 , helper: function(){
-                    return createControlFromLabel(this) ;
+                    return createControlFromLabel(this,false).show() ;
                 }
                 , connectToSortable: "#main-editarea>form"
             }) ;
 
 
-        function createControlFromLabel(eleLabel){
+        function createControlFromLabel(eleLabel,init){
             var controlname = $(eleLabel).attr("name") ;
-            return initControl( $("#control-templates .control-group[name="+controlname+"]")
-                                .clone() ) ;
+	    var control = $("#control-templates .control-group[name="+controlname+"]")
+                .clone()
+		.hide() ;
+	    jQuery(document.body).insert() ;
+	    
+	    if(init)
+		initControl(control) ;
+            return control ;
         }
         function initControl(control){
 	    // 随机id
@@ -114,10 +120,36 @@ module.exports = {
 		    , 'v:failedclass': 'text-error'
 		}) ;
 
+	    var name = $(control).attr("name") ;
+	    if(ControlInitHandles[name]){
+		ControlInitHandles[name].call( control ) ;
+	    }
+
             return $(control).click(function(){
                 openProps(this) ;
             }) ;
         }
+
+	var ControlInitHandles = {
+	    districts: function(){
+		// console.log('on init control') ;
+		var id = $(this).attr('id') ;
+
+		$(this)
+		    .find("select[name=provinces]")
+		    .linkageSelect().load() ;
+
+		$(this)
+		    .find("select[name=cities]")
+		    .attr('linkto',"select[name=provinces]")
+		    .linkageSelect() ;
+		
+		$(this)
+		    .find("select[name=districts]")
+		    .attr('linkto',"#"+id+" select[name=cities]")
+		    .linkageSelect() ;
+	    }
+	} ;
 
         // 表单名称也作为一个可编辑的控件
         initControl( $(".theformname")[0] ) ;
