@@ -59,12 +59,13 @@ module.exports = {
 
 
         $form.sortable({
-            items: ".control-group"
+            items: ".form-group"
             , forcePlaceholderSizeType: true
             , stop: function(event,ui){
 		// 将控件放入表单中
-                if( !ui.item.hasClass('control-group') && ui.item.size() ){
-                    createControlFromLabel(ui.item[0]).insertBefore(ui.item) ;
+                if( !ui.item.hasClass('form-group') && ui.item.size() ){
+                    createControlFromLabel(ui.item[0],true)
+			.show().insertBefore(ui.item) ;
                     ui.item[0].parentNode.removeChild(ui.item[0]) ;
                 }
 		// 从表单中移除控件
@@ -92,16 +93,22 @@ module.exports = {
 		    hideDragTip() ;
                 }
                 , helper: function(){
-                    return createControlFromLabel(this) ;
+                    return createControlFromLabel(this,false).show() ;
                 }
                 , connectToSortable: "#main-editarea>form"
             }) ;
 
 
-        function createControlFromLabel(eleLabel){
+        function createControlFromLabel(eleLabel,init){
             var controlname = $(eleLabel).attr("name") ;
-            return initControl( $("#control-templates .control-group[name="+controlname+"]")
-                                .clone() ) ;
+	    var control = $("#control-templates .form-group[name="+controlname+"]")
+                .clone()
+		.hide() ;
+	    jQuery(document.body).append(control) ;
+	    
+	    if(init)
+		initControl(control) ;
+            return control ;
         }
         function initControl(control){
 	    // 随机id
@@ -114,17 +121,43 @@ module.exports = {
 		    , 'v:failedclass': 'text-error'
 		}) ;
 
+	    var name = $(control).attr("name") ;
+	    if(ControlInitHandles[name]){
+		ControlInitHandles[name].call( control ) ;
+	    }
+
             return $(control).click(function(){
                 openProps(this) ;
             }) ;
         }
+
+	var ControlInitHandles = {
+	    districts: function(){
+		// console.log('on init control') ;
+		var id = $(this).attr('id') ;
+
+		$(this)
+		    .find("select[name=provinces]")
+		    .linkageSelect().load() ;
+
+		$(this)
+		    .find("select[name=cities]")
+		    .attr('linkto',"select[name=provinces]")
+		    .linkageSelect() ;
+		
+		$(this)
+		    .find("select[name=districts]")
+		    .attr('linkto',"#"+id+" select[name=cities]")
+		    .linkageSelect() ;
+	    }
+	} ;
 
         // 表单名称也作为一个可编辑的控件
         initControl( $(".theformname")[0] ) ;
 
 
 	function displyEmptyForm (){
-            if( !$form.find('.control-group').size() ){
+            if( !$form.find('.form-group').size() ){
                 if( !$form.find('div.alert').size() ){
 		    $('<div class="alert alert-info" style="margin: 10px">'
 		      + '<i class="icon-plus"></i> '
@@ -538,7 +571,7 @@ module.exports = {
                     , controls: []
                     , html: $tmpform.html()
                 } ;
-                $(this).find('.control-group').each(function(){
+                $(this).find('.form-group').each(function(){
                     var type = $(this).attr('name') ;
                     var jsoncontrol = {
                         type: type
@@ -563,12 +596,12 @@ module.exports = {
         if(!jQuery.fn.ocxformerRestore) {
             jQuery.fn.ocxformerRestore = function(json){
 		// 清除表单
-		$(this).find('.control-group,.theformname').remove() ;
+		$(this).find('.form-group,.theformname').remove() ;
 
 		// 恢复表单
                 $(this).append(json.html) ;
 
-                $(this).find('.control-group').each(function(){
+                $(this).find('.form-group').each(function(){
                     initControl(this) ;
                 }) ;
 
@@ -669,7 +702,7 @@ module.exports = {
         }
 
         $('.test-validation-rules').click(function(){
-            $('.ocxformeditor .control-group')
+            $('.ocxformeditor .form-group')
                 .find('input,select,textarea')
 		.validate(false) ;
         }) ;

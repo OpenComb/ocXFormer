@@ -1,0 +1,1081 @@
+<<<<<<< HEAD
+<link href="/ocxformer/public/style/formEditor.css" rel="stylesheet">
+<script src="/jquery-ui/ui/jquery-ui.js"></script>
+<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+<link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+<div class="row">
+
+    <div class="col-md-3" id="sidepanel-left">
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">预设</a></h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="accordion-inner">
+                            <ul>
+                                <li class="control-item" name="realname"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    姓名
+                                </li>
+                                <li class="control-item" name="email"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    Email
+                                </li>
+                                <li class="control-item" name="mobile"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    移动电话
+                                </li>
+                                <li class="control-item" name="telephone"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    固定电话
+                                </li>
+                                <li class="control-item" name="fax" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize">
+                                    传真
+                                </li>
+                                <li class="control-item" name="addr"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    地址
+                                </li>
+                                <li class="control-item" name="zipcode"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    邮编
+                                </li>
+                                <li class="control-item" name="gender"
+                                    data-control-props="titlestyle,controlstyle,name,title,selectoptions,inputsize,validation,validationmessage">
+                                    性别
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">通用</a></h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="accordion-inner">
+
+                            <ul>
+                                <li class="control-item" name="textinput"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    Text Input
+                                </li>
+
+                                <li class="control-item" name="prependedtext"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,validation,validationmessage">
+                                    Prepended Text
+                                </li>
+
+                                <li class="control-item" name="appendedtext"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,validation,validationmessage">
+                                    Appended Text
+                                </li>
+
+                                <li class="control-item" name="prependedcheckbox"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,validation,validationmessage">
+                                    Prepended Checkbox
+                                </li>
+
+                                <li class="control-item" name="appendedcheckbox"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,validation,validationmessage">
+                                    Appended Checkbox
+                                </li>
+
+                                <li class="control-item" name="textarea"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    Text Area
+                                </li>
+
+                                <li class="control-item" name="multipleradios"
+                                    data-control-props="titlestyle,controlstyle,name,title,multipleradios,validation,validationmessage">
+                                    Multiple Radios
+                                </li>
+
+                                <li class="control-item" name="multiplecheckboxes"
+                                    data-control-props="titlestyle,controlstyle,name,title,multiplecheckboxes,validation,validationmessage">
+                                    Multiple Checkboxes
+                                </li>
+
+                                <li class="control-item" name="selectbasic"
+                                    data-control-props="titlestyle,controlstyle,name,title,selectoptions,inputsize,validation,validationmessage">
+                                    Select Basic
+                                </li>
+
+                                <li class="control-item" name="selectmultiple"
+                                    data-control-props="titlestyle,controlstyle,name,title,selectoptions,inputsize,validation,validationmessage">
+                                    Select Multiple
+                                </li>
+
+                                <li class="control-item" name="theformname" style="display:none" data-control-props="theformname">The Form Name</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">高级</a></h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <span style="margin-left:30px;line-height:40px;">coming soon ... ...</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!-- 2 -->
+
+
+
+        <div class="col-md-6" id="main-editarea">
+
+
+
+
+                    <form class="form-horizontal ocxformeditor">
+                        <div class="tipbar">
+                            <p>
+                                <i class="icon-move"></i>
+                                可以拖动表单中的控件调整位置；
+                            </p>
+
+                            <p>
+                                <i class="icon-trash"></i>
+                                或者将控件拖动到表单外释放移除控件。
+                            </p>
+                        </div>
+
+                        <div class="theformname" name="theformname">
+                            <legend>表单名</legend>
+                        </div>
+
+                    </form>
+
+
+
+        </div>
+
+
+    <div class="col-md-3" id="sidepanel-right">
+        <div class="panel panel-default" style="border-width:0;">
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="active"><a href="#control-props" data-toggle="tab"><i class="glyphicon glyphicon-tags"></i> 属性</a></li>
+                <li class=""><a href="#validation" data-toggle="tab"><i class="glyphicon glyphicon-ok"></i> 输入检查</a></li>
+            </ul>
+            <div class="panel-body">
+                <div class="tab-content" style="border: 0px;padding: 0px;">
+                    <div id="validation" class="tab-pane">
+
+                        <div style="height:20px">
+                            <a class="btn btn-primary pull-right handle_btn test-validation-rules" href="javascript:void(0)"><i class="glyphicon glyphicon-wrench"></i></a>
+                        </div>
+
+                        <div class="control-group" data-prop-name="validation">
+
+                            <label class="control-label">检查规则</label>
+
+                            <ul class="validator-rules" style='clear:both; margin-top:10px'></ul>
+                            <select name="vtype" class="input-large form-control input-sm" style="margin-left:10px">
+                                <option>+ 添加输入检查规则</option>
+                                <optgroup>
+                                    <option value="min" defaultSetting='4'>最小长度/数量</option>
+                                    <option value="max" defaultSetting='20'>最大长度/数量</option>
+                                    <option value="notempty">不允许为空</option>
+                                    <option value="email">邮箱格式</option>
+                                    <option value="date">日期格式</option>
+                                    <option value="num">数字（整数或小数）</option>
+                                    <option value="int">整数</option>
+                                    <option value="telnumber">固定电话或传真</option>
+                                    <option value="mobilenumber">移动电话</option>
+                                    <option value="regexp" defaultSetting='/.+/'>正则表达式</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="control-group" data-prop-name="validationmessage">
+                            <label class="control-label">错误消息</label>
+
+                            <div class="controls">
+                                <input name="validationmessage" type="text" placeholder="" class="input-large form-control input-sm">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="control-props" class="control-props tab-pane active">
+
+                        <div class="control-group" data-prop-name="name">
+                            <label class="control-label">名称(name)</label>
+
+                            <div class="controls">
+                                <input name="name" type="text" placeholder="保存到数据库中的字段值" class="input-large form-control input-sm">
+                            </div>
+                        </div>
+
+                        <div class="control-group" data-prop-name="title">
+                            <label class="control-label" for="textinput">标题</label>
+
+                            <div class="controls">
+                                <input name="title" type="text" placeholder="" class="input-large form-control input-sm">
+                            </div>
+                        </div>
+
+                        <div class="control-group" data-prop-name="titlestyle">
+                            <label class="control-label">标题样式</label>
+
+                            <div class="controls">
+                                <select name="titlestyle" class="input-large form-control input-sm">
+                                    <option value="">无</option>
+                                    <option value="text-warning">warning</option>
+                                    <option value="text-error">error</option>
+                                    <option value="text-info">info</option>
+                                    <option value="text-success">success</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="control-group" data-prop-name="controlstyle">
+                            <label class="control-label">控件样式</label>
+
+                            <div class="controls">
+                                <select name="controlstyle" class="input-large form-control input-sm">
+                                    <option value="">无</option>
+                                    <option value="warning" class="">warning</option>
+                                    <option value="error">error</option>
+                                    <option value="info">info</option>
+                                    <option value="success">success</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="control-group" data-prop-name="textvalue">
+                            <label class="control-label" for="textvalue">文本值</label>
+
+                            <div class="controls">
+                                <input name="textvalue" type="text" placeholder="" class="input-large form-control input-sm">
+                            </div>
+                        </div>
+
+                        <div class="control-group" data-prop-name="placeholder">
+                            <label class="control-label" for="placeholder">提示</label>
+
+                            <div class="controls">
+                                <input name="placeholder" type="text" placeholder="" class="input-large form-control input-sm">
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="control-group" data-prop-name="inputsize">
+                            <label class="control-label">尺寸</label>
+
+                            <div class="controls">
+                                <select name="inputsize" class="input-large form-control input-sm">
+                                    <option value="">默认</option>
+                                    <option value="input-mini">mini</option>
+                                    <option value="input-small">small</option>
+                                    <option value="input-medium">medium</option>
+                                    <option value="input-large form-control input-sm">large</option>
+                                    <option value="input-xlarge">xlarge</option>
+                                    <option value="input-xxlarge">xxlarge</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <!-- Multiple Items -->
+                        <div class="control-group" data-prop-name="multipleitems">
+                            <label class="control-label">选项</label>
+                            <textarea class="field-large" data-type="textarea-split" style="width:210px; min-height: 200px" edit_id="eta_13"></textarea>
+                        </div>
+
+                        <!-- The form name -->
+                        <div class="control-group" data-prop-name="theformname">
+                            <label class="control-label">表单名称</label>
+                            <input name="theformname" type="text" placeholder="" class="input-large form-control input-sm">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="control-templates" style="display:none">
+
+    <!-- Text input-->
+    <div class="control-group form-group" name="textinput">
+        <label class="control-label col-sm-3">Text input</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="placeholder" class="form-control input-sm">
+
+            <p class="help-block">Supporting help text</p>
+        </div>
+    </div>
+
+    <div class="control-group form-group" name="prependedtext">
+
+        <!-- Prepended text-->
+        <label class="control-label col-sm-3">Prepended text</label>
+
+        <div class="controls col-sm-8">
+            <div class="input-prepend input-group input-group-sm">
+                <span class="input-group-addon">^_^</span>
+                <input class="form-control input-sm" placeholder="placeholder" id="prependedInput" type="text">
+            </div>
+            <p class="help-block">Supporting help text</p>
+        </div>
+
+    </div>
+
+    <div class="control-group form-group" name="appendedtext">
+
+        <!-- Appended input-->
+        <label class="control-label col-sm-3">Appended text</label>
+
+        <div class="controls col-sm-8">
+            <div class="input-prepend input-group input-group-sm">
+                <input class="form-control input-sm" placeholder="placeholder" type="text">
+                <span class="input-group-addon">^_^</span>
+            </div>
+            <p class="help-block">Supporting help text</p>
+        </div>
+
+    </div>
+
+    <div class="control-group form-group" name="prependedcheckbox">
+
+        <!-- Prepended checkbox -->
+        <label class="control-label col-sm-3">Prepended checkbox</label>
+
+        <div class="controls col-sm-8">
+
+            <div class="input-prepend input-group input-group-sm">
+            <span class="input-group-addon">
+              <label>
+                  <input type="checkbox" class="input-sm">
+              </label>
+            </span>
+                <input class="form-control input-sm" placeholder="placeholder" type="text">
+            </div>
+            <p class="help-block">Supporting help text</p>
+        </div>
+
+    </div>
+
+    <div class="control-group form-group" name="appendedcheckbox">
+
+        <!-- Appended checkbox -->
+        <label class="control-label col-sm-3">Append checkbox</label>
+
+        <div class="controls col-sm-8">
+            <div class="input-prepend  input-group input-group-sm">
+                <input class="form-control input-sm" placeholder="placeholder" type="text">
+        <span class="input-group-addon">
+          <label>
+              <input type="checkbox" class="">
+          </label>
+        </span>
+            </div>
+            <p class="help-block">Supporting help text</p>
+        </div>
+    </div>
+
+    <div class="control-group form-group" name="textarea">
+
+        <!-- Textarea -->
+        <label class="control-label col-sm-3">Textarea</label>
+
+        <div class="controls col-sm-8">
+            <div class="textarea">
+                <textarea class="form-control"> </textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- Multiple Radios -->
+    <div class="control-group form-group" name="multipleradios">
+        <label class="control-label col-sm-3">Multiple Radios</label>
+
+        <div class="controls col-sm-8">
+            <label class="radio">
+                <input type="radio" name="radios" value="Option one">
+                Option one
+            </label>
+            <label class="radio">
+                <input type="radio" name="radios" value="Option two">
+                Option two
+            </label>
+        </div>
+    </div>
+
+    <!-- Multiple Checkboxes -->
+    <div class="control-group form-group" name="multiplecheckboxes">
+        <label class="control-label col-sm-3">Multiple Checkboxes</label>
+
+        <div class="controls col-sm-8">
+            <label class="checkbox">
+                <input type="checkbox" name="checkbox" value="Option one">
+                Option one
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" name="checkbox" value="Option two">
+                Option two
+            </label>
+        </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="control-group form-group" name="selectbasic">
+        <label class="control-label col-sm-3">Select Basic</label>
+
+        <div class="controls col-sm-8">
+            <select class="form-control">
+                <option>Option one</option>
+                <option>Option two</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Select Multiple -->
+    <div class="control-group form-group" name="selectmultiple">
+        <label class="control-label col-sm-3">Select Multiple</label>
+
+        <div class="controls col-sm-8">
+            <select name="selectmultiple" class="form-control" multiple="multiple">
+                <option>Option one</option>
+                <option>Option two</option>
+            </select>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------- -->
+    <div class="control-group form-group" name="realname">
+        <label class="control-label col-sm-3">姓名</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入真实用户姓名" class="form-control input-sm" name="realname" v:min="2" v:max="20">
+
+            <p class="help-block"></p>
+        </div>
+    </div>
+
+    <div class="control-group form-group" name="email">
+        <label class="control-label col-sm-3">电子邮件</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入电子邮件" class="form-control input-sm" name="email" v:min="6" v:max="60" v:email>
+
+            <p class="help-block"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="mobile">
+        <label class="control-label col-sm-3">移动电话</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入移动电话号码" class="form-control input-sm" name="mobile" v:mobilenumber>
+
+            <p class="help-block" style="margin-bottom: 0px;"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="telephone">
+        <label class="control-label col-sm-3">固定电话</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入固定电话号码" class="form-control input-sm" name="telephone" v:telnumber>
+
+            <p class="help-block" style="margin-bottom: 0px;"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="fax">
+        <label class="control-label col-sm-3">传真</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入传真号码" class="form-control input-sm" name="fax" v:telnumber>
+
+            <p class="help-block"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="addr">
+        <label class="control-label col-sm-3">地址</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入通讯地址" class="form-control input-sm" name="addr" v:min="4" v:max="40">
+
+            <p class="help-block"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="zipcode">
+        <label class="control-label col-sm-3">邮编</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入邮政编码" class="form-control input-sm" name="zipcode" v:zipcode>
+
+            <p class="help-block"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="gender">
+        <label class="control-label col-sm-3">性别</label>
+
+        <div class="controls col-sm-8">
+            <select class="form-control input-sm" name="gender">
+                <option selected>保密</option>
+                <option>女</option>
+                <option>男</option>
+            </select>
+        </div>
+    </div>
+
+</div>
+
+
+=======
+<link href="/ocxformer/public/style/formEditor.css" rel="stylesheet">
+<script src="/jquery-ui/ui/jquery-ui.js"></script>
+
+
+<div class="row">
+
+    <div class="col-md-3">
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">预设</a></h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="accordion-inner">
+                            <ul>
+                                <li class="control-item" name="realname"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    姓名
+                                </li>
+                                <li class="control-item" name="email"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    Email
+                                </li>
+                                <li class="control-item" name="mobile"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    移动电话
+                                </li>
+                                <li class="control-item" name="telephone"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    固定电话
+                                </li>
+                                <li class="control-item" name="fax" data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize">
+                                    传真
+                                </li>
+                                <li class="control-item" name="addr"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    地址
+                                </li>
+                                <li class="control-item" name="zipcode"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    邮编
+                                </li>
+                                <li class="control-item" name="gender"
+                                    data-control-props="titlestyle,controlstyle,name,title,selectoptions,inputsize,validation,validationmessage">
+                                    性别
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">通用</a></h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="accordion-inner">
+
+                            <ul>
+                                <li class="control-item" name="textinput"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    Text Input
+                                </li>
+
+                                <li class="control-item" name="prependedtext"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,validation,validationmessage">
+                                    Prepended Text
+                                </li>
+
+                                <li class="control-item" name="appendedtext"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,validation,validationmessage">
+                                    Appended Text
+                                </li>
+
+                                <li class="control-item" name="prependedcheckbox"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,validation,validationmessage">
+                                    Prepended Checkbox
+                                </li>
+
+                                <li class="control-item" name="appendedcheckbox"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,validation,validationmessage">
+                                    Appended Checkbox
+                                </li>
+
+                                <li class="control-item" name="textarea"
+                                    data-control-props="titlestyle,controlstyle,name,title,textvalue,placeholder,inputsize,validation,validationmessage">
+                                    Text Area
+                                </li>
+
+                                <li class="control-item" name="multipleradios"
+                                    data-control-props="titlestyle,controlstyle,name,title,multipleradios,validation,validationmessage">
+                                    Multiple Radios
+                                </li>
+
+                                <li class="control-item" name="multiplecheckboxes"
+                                    data-control-props="titlestyle,controlstyle,name,title,multiplecheckboxes,validation,validationmessage">
+                                    Multiple Checkboxes
+                                </li>
+
+                                <li class="control-item" name="selectbasic"
+                                    data-control-props="titlestyle,controlstyle,name,title,selectoptions,inputsize,validation,validationmessage">
+                                    Select Basic
+                                </li>
+
+                                <li class="control-item" name="selectmultiple"
+                                    data-control-props="titlestyle,controlstyle,name,title,selectoptions,inputsize,validation,validationmessage">
+                                    Select Multiple
+                                </li>
+
+                                <li class="control-item" name="theformname" style="display:none" data-control-props="theformname">The Form Name</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">高级</a></h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <span style="margin-left:30px;line-height:40px;">coming soon ... ...</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div id="main-editarea">
+      <form class="form-horizontal ocxformeditor">
+        <div class="tipbar">
+          <p>
+            <i class="icon-move"></i>
+            可以拖动表单中的控件调整位置；
+          </p>
+          <p>
+            <i class="icon-trash"></i>
+            或者将控件拖动到表单外释放移除控件。
+          </p>
+        </div>
+
+        <div class="theformname" name="theformname">
+          <legend>表单名</legend>
+        </div>
+
+      </form>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="panel panel-default" style="border-width:0;">
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="active"><a href="#control-props" data-toggle="tab"><i class="glyphicon glyphicon-tags"></i> 属性</a></li>
+                <li class=""><a href="#validation" data-toggle="tab"><i class="glyphicon glyphicon-ok"></i> 输入检查</a></li>
+            </ul>
+            <div class="panel-body">
+                <div class="tab-content" style="border: 0px;padding: 0px;">
+                    <div id="validation" class="tab-pane">
+
+                        <div style="height:20px">
+                            <a class="btn btn-primary pull-right handle_btn test-validation-rules" href="javascript:void(0)"><i class="glyphicon glyphicon-wrench"></i></a>
+                        </div>
+
+                        <div class="control-group" data-prop-name="validation">
+
+                            <label class="control-label">检查规则</label>
+
+                            <ul class="validator-rules" style='clear:both; margin-top:10px'></ul>
+                            <select name="vtype" class="input-large form-control input-sm" style="margin-left:24px">
+                                <option>+ 添加输入检查规则</option>
+                                <optgroup>
+                                    <option value="min" defaultSetting='4'>最小长度/数量</option>
+                                    <option value="max" defaultSetting='20'>最大长度/数量</option>
+                                    <option value="notempty">不允许为空</option>
+                                    <option value="email">邮箱格式</option>
+                                    <option value="date">日期格式</option>
+                                    <option value="num">数字（整数或小数）</option>
+                                    <option value="int">整数</option>
+                                    <option value="telnumber">固定电话或传真</option>
+                                    <option value="mobilenumber">移动电话</option>
+                                    <option value="regexp" defaultSetting='/.+/'>正则表达式</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="control-group" data-prop-name="validationmessage">
+                            <label class="control-label">错误消息</label>
+
+                            <div class="controls">
+                                <input name="validationmessage" type="text" placeholder="" class="input-large form-control input-sm">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="control-props" class="control-props tab-pane active">
+
+                        <div class="control-group" data-prop-name="name">
+                            <label class="control-label">名称(name)</label>
+
+                            <div class="controls">
+                                <input name="name" type="text" placeholder="保存到数据库中的字段值" class="input-large form-control input-sm">
+                            </div>
+                        </div>
+
+                        <div class="control-group" data-prop-name="title">
+                            <label class="control-label" for="textinput">标题</label>
+
+                            <div class="controls">
+                                <input name="title" type="text" placeholder="" class="input-large form-control input-sm">
+                            </div>
+                        </div>
+
+                        <div class="control-group" data-prop-name="titlestyle">
+                            <label class="control-label">标题样式</label>
+
+                            <div class="controls">
+                                <select name="titlestyle" class="input-large form-control input-sm">
+                                    <option value="">无</option>
+                                    <option value="text-warning">warning</option>
+                                    <option value="text-error">error</option>
+                                    <option value="text-info">info</option>
+                                    <option value="text-success">success</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="control-group" data-prop-name="controlstyle">
+                            <label class="control-label">控件样式</label>
+
+                            <div class="controls">
+                                <select name="controlstyle" class="input-large form-control input-sm">
+                                    <option value="">无</option>
+                                    <option value="warning" class="">warning</option>
+                                    <option value="error">error</option>
+                                    <option value="info">info</option>
+                                    <option value="success">success</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="control-group" data-prop-name="textvalue">
+                            <label class="control-label" for="textvalue">文本值</label>
+
+                            <div class="controls">
+                                <input name="textvalue" type="text" placeholder="" class="input-large form-control input-sm">
+                            </div>
+                        </div>
+
+                        <div class="control-group" data-prop-name="placeholder">
+                            <label class="control-label" for="placeholder">提示</label>
+
+                            <div class="controls">
+                                <input name="placeholder" type="text" placeholder="" class="input-large form-control input-sm">
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="control-group" data-prop-name="inputsize">
+                            <label class="control-label">尺寸</label>
+
+                            <div class="controls">
+                                <select name="inputsize" class="input-large form-control input-sm">
+                                    <option value="">默认</option>
+                                    <option value="input-mini">mini</option>
+                                    <option value="input-small">small</option>
+                                    <option value="input-medium">medium</option>
+                                    <option value="input-large form-control input-sm">large</option>
+                                    <option value="input-xlarge">xlarge</option>
+                                    <option value="input-xxlarge">xxlarge</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <!-- Multiple Items -->
+                        <div class="control-group" data-prop-name="multipleitems">
+                            <label class="control-label">选项</label>
+                            <textarea class="field-large" data-type="textarea-split" style="width:210px; min-height: 200px" edit_id="eta_13"></textarea>
+                        </div>
+
+                        <!-- The form name -->
+                        <div class="control-group" data-prop-name="theformname">
+                            <label class="control-label">表单名称</label>
+                            <input name="theformname" type="text" placeholder="" class="input-large form-control input-sm">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="control-templates" style="display:none">
+
+    <!-- Text input-->
+    <div class="control-group form-group" name="textinput">
+        <label class="control-label col-sm-3">Text input</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="placeholder" class="form-control input-sm">
+
+            <p class="help-block">Supporting help text</p>
+        </div>
+    </div>
+
+    <div class="control-group form-group" name="prependedtext">
+
+        <!-- Prepended text-->
+        <label class="control-label col-sm-3">Prepended text</label>
+
+        <div class="controls col-sm-8">
+            <div class="input-prepend input-group input-group-sm">
+                <span class="input-group-addon">^_^</span>
+                <input class="form-control input-sm" placeholder="placeholder" id="prependedInput" type="text">
+            </div>
+            <p class="help-block">Supporting help text</p>
+        </div>
+
+    </div>
+
+    <div class="control-group form-group" name="appendedtext">
+
+        <!-- Appended input-->
+        <label class="control-label col-sm-3">Appended text</label>
+
+        <div class="controls col-sm-8">
+            <div class="input-prepend input-group input-group-sm">
+                <input class="form-control input-sm" placeholder="placeholder" type="text">
+                <span class="input-group-addon">^_^</span>
+            </div>
+            <p class="help-block">Supporting help text</p>
+        </div>
+
+    </div>
+
+    <div class="control-group form-group" name="prependedcheckbox">
+
+        <!-- Prepended checkbox -->
+        <label class="control-label col-sm-3">Prepended checkbox</label>
+
+        <div class="controls col-sm-8">
+
+            <div class="input-prepend input-group input-group-sm">
+            <span class="input-group-addon">
+              <label>
+                  <input type="checkbox" class="input-sm">
+              </label>
+            </span>
+                <input class="form-control input-sm" placeholder="placeholder" type="text">
+            </div>
+            <p class="help-block">Supporting help text</p>
+        </div>
+
+    </div>
+
+    <div class="control-group form-group" name="appendedcheckbox">
+
+        <!-- Appended checkbox -->
+        <label class="control-label col-sm-3">Append checkbox</label>
+
+        <div class="controls col-sm-8">
+            <div class="input-prepend  input-group input-group-sm">
+                <input class="form-control input-sm" placeholder="placeholder" type="text">
+        <span class="input-group-addon">
+          <label>
+              <input type="checkbox" class="">
+          </label>
+        </span>
+            </div>
+            <p class="help-block">Supporting help text</p>
+        </div>
+    </div>
+
+    <div class="control-group form-group" name="textarea">
+
+        <!-- Textarea -->
+        <label class="control-label col-sm-3">Textarea</label>
+
+        <div class="controls col-sm-8">
+            <div class="textarea">
+                <textarea class="form-control"> </textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- Multiple Radios -->
+    <div class="control-group form-group" name="multipleradios">
+        <label class="control-label col-sm-3">Multiple Radios</label>
+
+        <div class="controls col-sm-8">
+            <label class="radio">
+                <input type="radio" name="radios" value="Option one">
+                Option one
+            </label>
+            <label class="radio">
+                <input type="radio" name="radios" value="Option two">
+                Option two
+            </label>
+        </div>
+    </div>
+
+    <!-- Multiple Checkboxes -->
+    <div class="control-group form-group" name="multiplecheckboxes">
+        <label class="control-label col-sm-3">Multiple Checkboxes</label>
+
+        <div class="controls col-sm-8">
+            <label class="checkbox">
+                <input type="checkbox" name="checkbox" value="Option one">
+                Option one
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" name="checkbox" value="Option two">
+                Option two
+            </label>
+        </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="control-group form-group" name="selectbasic">
+        <label class="control-label col-sm-3">Select Basic</label>
+
+        <div class="controls col-sm-8">
+            <select class="form-control">
+                <option>Option one</option>
+                <option>Option two</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Select Multiple -->
+    <div class="control-group form-group" name="selectmultiple">
+        <label class="control-label col-sm-3">Select Multiple</label>
+
+        <div class="controls col-sm-8">
+            <select name="selectmultiple" class="form-control" multiple="multiple">
+                <option>Option one</option>
+                <option>Option two</option>
+            </select>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------- -->
+    <div class="control-group form-group" name="realname">
+        <label class="control-label col-sm-3">姓名</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入真实用户姓名" class="form-control input-sm" name="realname" v:min="2" v:max="20">
+
+            <p class="help-block"></p>
+        </div>
+    </div>
+
+    <div class="control-group form-group" name="email">
+        <label class="control-label col-sm-3">电子邮件</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入电子邮件" class="form-control input-sm" name="email" v:min="6" v:max="60" v:email>
+
+            <p class="help-block"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="mobile">
+        <label class="control-label col-sm-3">移动电话</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入移动电话号码" class="form-control input-sm" name="mobile" v:mobilenumber>
+
+            <p class="help-block" style="margin-bottom: 0px;"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="telephone">
+        <label class="control-label col-sm-3">固定电话</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入固定电话号码" class="form-control input-sm" name="telephone" v:telnumber>
+
+            <p class="help-block" style="margin-bottom: 0px;"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="fax">
+        <label class="control-label col-sm-3">传真</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入传真号码" class="form-control input-sm" name="fax" v:telnumber>
+
+            <p class="help-block"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="addr">
+        <label class="control-label col-sm-3">地址</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入通讯地址" class="form-control input-sm" name="addr" v:min="4" v:max="40">
+
+            <p class="help-block"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="zipcode">
+        <label class="control-label col-sm-3">邮编</label>
+
+        <div class="controls col-sm-8">
+            <input type="text" placeholder="请输入邮政编码" class="form-control input-sm" name="zipcode" v:zipcode>
+
+            <p class="help-block"></p>
+        </div>
+    </div>
+    <div class="control-group form-group" name="gender">
+        <label class="control-label col-sm-3">性别</label>
+
+        <div class="controls col-sm-8">
+            <select class="form-control input-sm" name="gender">
+                <option selected>保密</option>
+                <option>女</option>
+                <option>男</option>
+            </select>
+        </div>
+    </div>
+
+</div>
+
+
+>>>>>>> f0ff069f03ce5bfb88a9a8fb884c67530ed8199d

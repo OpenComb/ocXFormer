@@ -1,19 +1,19 @@
 {
-    "name": "ocxformer",
-    "version": "0.1.0",
-    "description": "a form tool of opencomb ",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/OpenComb/ocXFormer.git"
-    },
-    "author": "aleechou",
-    "license": "MIT",
-    "readmeFilename": "README.md",
-    "dependencies": {
-	"ocframework": "0.9.2"
-    }
+  "name": "ocxformer",
+  "version": "0.1.0",
+  "description": "a form tool of opencomb ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/OpenComb/ocXFormer.git"
+  },
+  "author": "aleechou",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "ocframework": "0.9.7"
+  }
 }

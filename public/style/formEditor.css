@@ -32,7 +32,7 @@
    display: none ;
 }
 
-.validator-rules{padding-left:10px; list-style:none;}
+.validator-rules{padding-left:20px;}
 .validator-rules li{padding:6px 0;}
 #validation .control-group {
    display: none ;
