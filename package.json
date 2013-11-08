@@ -14,7 +14,6 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "ocframework": "0.9.7",
-    "libxmljs": "~0.8.1"
+    "ocframework": "0.9.7"
   }
 }
