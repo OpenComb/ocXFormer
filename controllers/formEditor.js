@@ -159,7 +159,7 @@ module.exports = {
 	function displyEmptyForm (){
             if( !$form.find('.form-group').size() ){
                 if( !$form.find('div.alert').size() ){
-		    $('<div class="alert alert-info">'
+		    $('<div class="alert alert-info" style="margin: 10px">'
 		      + '<i class="icon-plus"></i> '
                       + '请从左侧菜单中拖拽输入控件到当前表单.'
                       + '</div>')
@@ -665,7 +665,7 @@ module.exports = {
             var $li = $("<li></span>"
                         + $(option).text()
                         + "</span>"
-                        + "<span style='float:right' width='30px'> <a class='icon-pencil' href='javascript:void'></a> <a class='icon-minus-sign' href='javascript:void'></a> </span></li>")
+                        + "<span style='float:right' width='30px'> <a class='icon-pencil glyphicon glyphicon-pencil' href='javascript:void'></a> <a class='icon-minus-sign glyphicon glyphicon-minus-sign' href='javascript:void'></a> </span></li>")
                     .appendTo($('ul.validator-rules'))
                     .attr('vtype',option.value) ;
 
@@ -689,7 +689,7 @@ module.exports = {
                 $li.find('.icon-pencil').click(function(){
                 }) ;
 
-                $("<div style='clear:both;text-align:right;'><input type=text class='input-large' name='setting' value=\""+(value===undefined? defaultSetting: value)+"\" style='margin-bottom:0px'></div>")
+                $("<div style='clear:both;text-align:right;'><input type=text class='input-large form-control input-sm' name='setting' value=\""+(value===undefined? defaultSetting: value)+"\" style='margin-bottom:0px'></div>")
                     .appendTo($li)
                     .find('input')
                     .keyup(function(){

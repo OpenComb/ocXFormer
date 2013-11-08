@@ -1,3 +1,4 @@
+
 #sidepanel-left {
    float: left ;
    width: 200px ;
@@ -12,15 +13,12 @@
 
 #main-editarea {
    float: left ;
-   width: 100% ;
+   width: 50% ;
 }
 
 #main-editarea form {
-   margin-left: 210px ;
-   margin-right: 250px ;
-
    border: 1px solid #CCC;
-   padding: 5px;
+   border-radius: 4px;
 }
 
 #main-editarea form {
@@ -49,7 +47,13 @@ li.control-item {
    line-height:22px ;
    cursor: pointer ;
 }
-
+.text-error{
+    color: #e74c3c;
+}
+.form-group{
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
 
 
 element.style {
@@ -57,6 +61,7 @@ element.style {
 }
 
 #main-editarea form .tipbar {
+
    -webkit-background-size: 40px 40px;
    -moz-background-size: 40px 40px;
    background-size: 40px 40px;
@@ -77,6 +82,18 @@ element.style {
    background-color: rgba(72,187,94,0.5);
    border-color: #309343;
    display: none ;
+}
+
+
+#main-editarea form .theformname {
+    background-color: #e2e2e2;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    height: 39px;
+    padding: 6px;
+}
+#main-editarea form .control-group {
+    padding: 6px;
 }
 
 .validator-rules input {
