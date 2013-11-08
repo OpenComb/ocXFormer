@@ -1,9 +1,11 @@
 <link href="/ocxformer/public/style/formEditor.css" rel="stylesheet">
-<link href="/jquery-ui-bootstrap/jquery.ui.theme.css" rel="stylesheet">
 <script src="/jquery-ui/ui/jquery-ui.js"></script>
+<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+<link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
 <div class="row">
 
-    <div class="col-md-3">
+    <div class="col-md-3" id="sidepanel-left">
 
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
@@ -135,7 +137,7 @@
 
 
 
-        <div id="main-editarea">
+        <div class="col-md-6" id="main-editarea">
 
 
 
@@ -164,7 +166,7 @@
         </div>
 
 
-    <div class="col-md-3">
+    <div class="col-md-3" id="sidepanel-right">
         <div class="panel panel-default" style="border-width:0;">
             <ul class="nav nav-tabs" id="myTab">
                 <li class="active"><a href="#control-props" data-toggle="tab"><i class="glyphicon glyphicon-tags"></i> 属性</a></li>
@@ -183,7 +185,7 @@
                             <label class="control-label">检查规则</label>
 
                             <ul class="validator-rules" style='clear:both; margin-top:10px'></ul>
-                            <select name="vtype" class="input-large form-control input-sm" style="margin-left:24px">
+                            <select name="vtype" class="input-large form-control input-sm" style="margin-left:10px">
                                 <option>+ 添加输入检查规则</option>
                                 <optgroup>
                                     <option value="min" defaultSetting='4'>最小长度/数量</option>
