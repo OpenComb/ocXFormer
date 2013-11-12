@@ -17,22 +17,24 @@ jQuery(function($){
 	var that = this ;
 	// 安装 parent select 的 change 事件
 	var parentSelector = $sel.attr("linkto") ;
-console.log(parentSelector,$(parentSelector)) ;
 	if(parentSelector){
 	    $(parentSelector).change(function(){
 		var parentValue = $(this).val() ;
-console.log(parentValue) ;
-		if(parentValue===undefined || parentValue===null)
+		if(parentValue===undefined || parentValue===null) {
+		    that.$sel.html('') ;
 		    return ;
-		that.load(parentValue) ;
+		}
+		else{
+		    that.load(parentValue) ;
+		}
 	    }) ;
 	}
     }
 
-    _linkageSel.prototype.load = function(parentValue){
-	if(parentValue) parentValue = null ;
+    _linkageSel.prototype.load = function(parentValue,notClearOpts){
 
-	this.$sel.html("") ;
+	if(!notClearOpts)
+	    this.$sel.html("") ;
 	
 	var url = "/ocxformer/linkageSelectInterface.js?$render=false"
 	    + "&collection=" + (this.$sel.attr("collection")||"")
@@ -58,6 +60,7 @@ console.log(parentValue) ;
 	    }
 
 	    that.$sel[0].selectedIndex = -1 ;
+	    that.$sel.change() ;
 	},'json') ;
     }
 }) ;

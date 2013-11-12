@@ -89,7 +89,6 @@ module.exports = {
             .draggable({
                 stop: function(event,ui){
                     $dropPos.insertAfter($form).hide() ;
-
 		    hideDragTip() ;
                 }
                 , helper: function(){
@@ -132,25 +131,26 @@ module.exports = {
         }
 
 	var ControlInitHandles = {
-	    districts: function(){
-		// console.log('on init control') ;
-		var id = $(this).attr('id') ;
-
-		$(this)
-		    .find("select[name=provinces]")
-		    .linkageSelect().load() ;
-
-		$(this)
-		    .find("select[name=cities]")
-		    .attr('linkto',"select[name=provinces]")
-		    .linkageSelect() ;
-		
-		$(this)
-		    .find("select[name=districts]")
-		    .attr('linkto',"#"+id+" select[name=cities]")
-		    .linkageSelect() ;
-	    }
+	    "provinces-cities": districtsInitHandle
+	    , "provinces-cities-districts": districtsInitHandle
 	} ;
+	function districtsInitHandle(){
+	    var id = $(this).attr('id') ;
+
+	    $(this)
+		.find("select[name=provinces]")
+		.linkageSelect().load() ;
+
+	    $(this)
+		.find("select[name=cities]")
+		.attr('linkto',"select[name=provinces]")
+		.linkageSelect() ;
+	    
+	    $(this)
+		.find("select[name=districts]")
+		.attr('linkto',"#"+id+" select[name=cities]")
+		.linkageSelect() ;
+	}
 
         // 表单名称也作为一个可编辑的控件
         initControl( $(".theformname")[0] ) ;

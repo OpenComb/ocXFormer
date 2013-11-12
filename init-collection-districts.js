@@ -22,7 +22,7 @@ module.exports = function(){
 
     this.step(function(){
 	console.log("inserting provinces, cities, and districts into db ...") ;
-	dcoll.insert( 
+	dcoll.insert(
 	    require("./data/districts.json")
 	    , {}
 	    , function(err,inserted){}
