@@ -498,7 +498,7 @@ module.exports = {
                 var options = $(control).find("select").html('') ;
                 // 设置选项
                 for(var i=0;i<items.length;i++){
-                    options.append("<option value\""+items[i].value.replace('\\','\\\\').replace('"','\\"')+"\"> "+items[i].text+" </option>") ;
+                    options.append("<option value=\""+items[i].value.replace('\\','\\\\').replace('"','\\"')+"\"> "+items[i].text+" </option>") ;
                 }
             }
         }
