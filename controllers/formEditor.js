@@ -79,11 +79,10 @@ module.exports = {
 		hideDragTip() ;
             }
 	    , over: function(){
-		showDragTip() ;
+		//showDragTip() ;
 	    }
         }) ;
 
-	
 
         $(".control-item")
             .draggable({
